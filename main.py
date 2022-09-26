@@ -18,10 +18,12 @@ def random_color():
 
     return color
 
+def drawSpiro(gapSize):
 
-for _ in range(100):
-    chris.speed("normal")
-    chris.color(random_color())
-    chris.circle(100)
-    chris.setheading(chris.heading() + 10)
+    for _ in range(int(360/gapSize)):
+        chris.speed("fast")
+        chris.color(random_color())
+        chris.circle(100)
+        chris.setheading(chris.heading() + gapSize)
+drawSpiro(5)
 
